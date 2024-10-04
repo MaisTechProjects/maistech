@@ -13,18 +13,22 @@
     @media screen and (min-width:1024px) {
         background-image: url("../../assets/images/bg-pc.png");
         flex-direction: row;
+        gap: 70px;
+        justify-content: center;
+        padding-top: 10px;
         .home-container{
             justify-content: baseline !important;
             align-items: baseline;
+            
         }
         .title{
             text-align: left !important;
             font-size: 50px !important;
-            width: 670px;
+            width: 770px;
         }
         .subtitle{
             text-align: left !important;
-            width: 600px;
+            width: 700px;
         }
     }
     .title{
@@ -46,6 +50,7 @@
         background-color: transparent;
         color: colors.$light-color;
         font-weight: 800;
+        font-family: fonts.$montserrat;
         font-size:  24px;
         padding-left: 20px;
         padding-right: 20px;
@@ -71,19 +76,23 @@
 }
 .mobile{
     visibility: hidden;
+    display: none;
 }
 
 @media screen and (min-width:1024px) {
     .pc{
         visibility: visible;
+        display: flex;
         width: 380px !important;
     }   
 }
 @media screen and (max-width:1024px){
         .mobile{
             visibility: visible !important;
+            display: flex;
         }
         .pc{
+            display: none;
             visibility: hidden;
         }
 }

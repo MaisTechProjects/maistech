@@ -1,6 +1,30 @@
+---
+import Image from "astro/components/Image.astro";
+import "../styles/layouts/HomeLayout.scss";
+import Logo from "../assets/images/logo.png";
+---
 
-<section>
-    <h1>Um novo capitulo para o seu negócio</h1>    
-    <p>Somos uma empresa de desenvolvimento web criada com objetivo de modernizar a forma como empresas e trabalhadores autônomos vêem o mundo.</p>
-    <button>Faça um orçamento</button>
+<section id="home">
+  <Image
+    src={Logo}
+    width={300}
+    height={300}
+    alt="Logotipo da +Tech uma startup de tecnologia."
+    class="img mobile"
+  />
+  <article class="home-container">
+    <h1 class="title">Um novo capitulo para o seu negócio</h1>
+    <p class="subtitle">
+      Somos uma empresa de desenvolvimento web criada com objetivo de modernizar
+      a forma como empresas e trabalhadores autônomos vêem o mundo.
+    </p>
+    <button class="btn">Faça um orçamento</button>
+  </article>
+  <Image
+    src={Logo}
+    width={300}
+    height={300}
+    alt="Logotipo da +Tech uma startup de tecnologia."
+    class="img pc"
+  />
 </section>

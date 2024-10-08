@@ -1,0 +1,31 @@
+@use "../fonts";
+@use "../colors.scss";
+#about{
+    min-height: 100vh;
+    background-color: colors.$light-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .about-container{
+        padding: 23px;
+        .title{
+            font-size: 30px;
+            color:colors.$dark-color;
+            font-family: fonts.$avenir;
+        }
+        .description{
+            font-family: fonts.$montserrat;
+        }
+        .images-container{
+            .img{
+                width: 100px;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    }
+    .about-container:nth-child(2){
+        text-align: end;
+    }
+}

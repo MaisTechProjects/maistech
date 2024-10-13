@@ -1,31 +1,70 @@
 @use "../fonts";
 @use "../colors.scss";
-#about{
-    min-height: 100vh;
-    background-color: colors.$light-color;
-    display: flex;
-    flex-direction: column;
+
+.title {
+    font-size: 2em;
+    color:colors.$dark-color;
+    font-family: fonts.$avenir;
+
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-family: fonts.$montserrat;
+}
+
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
     align-items: center;
-    justify-content: space-around;
-    .about-container{
-        padding: 23px;
-        .title{
-            font-size: 30px;
-            color:colors.$dark-color;
-            font-family: fonts.$avenir;
+    justify-items: center;
+
+    width: 85%;
+    margin: auto;
+
+    @media screen and (max-width: 600px) {
+        article:nth-child(1) {
+            grid-column: 1 / -1;
         }
-        .description{
-            font-family: fonts.$montserrat;
+          
+        article:nth-child(2) {
+            grid-column: 1;
         }
-        .images-container{
-            .img{
-                width: 100px;
-                height: auto;
-                object-fit: contain;
-            }
+          
+        article:nth-child(3) {
+            grid-column: 2;
+        }
+          
+        article:nth-child(n+4) {
+            grid-column: 1 / -1;
         }
     }
-    .about-container:nth-child(2){
-        text-align: end;
+
+    img {
+        object-fit: contain;
+        max-width: 100%;
     }
+
+}
+
+#about_mobile {
+    width: 85%;
+    margin: auto;
+
+    .images {
+
+    }
+
+    img {
+        object-fit: contain;
+    }
+}
+
+.subtle {
+    display: block;
+    color: #2B449F;
+
+    font-size: 0.8em;
 }

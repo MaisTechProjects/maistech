@@ -5,29 +5,30 @@ import "../styles/layouts/AboutLayout.scss";
 import Elipses from "../assets/images/about-aside.png"
 import Line from "../assets/images/about-line.png"
 import BlueBalls from "../assets/images/about-blue-balls.png"
+
+import PcImage from "../assets/images/pc_about_1.svg"
+import PcImage2 from "../assets/images/pc_about.svg"
 ---
 
 <section id="about">
-  <article class="about-container">
-    <h2 class="title">
-      Priorizamos a qualidade <span style="color:#2B449F;">acima de tudo.</span>
-    </h2>
-    <p class="description">
-      Aqui na +Tech, é possivel, que um trabalho meticuloso feito com calma
-      garante que não serão encontrados erros ou mal funcionamentos, fique um
-      passo a frente daqueles que priorizam velocidade sobre qualidade.
-    </p>
-  </article>
-  <article class="about-container">
-    <div class="images-container">
-        <Image class="img" src={Elipses} height={300} width={700} alt="Elipses"/>
-        <Image class="img" src={BlueBalls} height={300} width={700} alt="Elipses"/>
+    <article>
+        <h2 class="title">Priorizamos a qualidade <span class="subtle">acima de tudo</span></h2>
+        <p class="description">
+            Aqui na +Tech, qualidade e segurança vêm em primeiro lugar,
+            fique um passo a frente daqueles que priorizam velocidade sobre qualidade.
+        </p>
+    </article>
+    <div>
+        <Image class="img" src={PcImage} height={200} width={300} alt="Elipses"/>
     </div>
-    <h2 class="title">Nosso objetivo <span style="color:#2B449F;">e propósito</span></h2>
-    <p class="description">
-      Somos uma empresa que tem como objetivo desenvolvimento web e design,
-      vamos deixar a sua empresa atualizada e com uma identidade visual de alta
-      qualidade, deixe a viagem com a gente e aproveite o objetivo.
-    </p>
-  </article>
+    <div>
+        <Image class="img" src={PcImage2} height={150} width={240} alt="Elipses"/>
+    </div>
+    <article>
+        <h2 class="title">Nosso objetivo <span class="subtle">e propósito</span></h2>
+        <p class="description">
+            Somos uma empresa de desenvolvimento web e design,
+            Nosso objetivo é atualizar e reescrever a forma como empresas e pequenos negócios marcam presença online.
+        </p>
+    </article>
 </section>

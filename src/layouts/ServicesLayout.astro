@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+import "../styles/layouts/ServicesLayout.scss";
+import Pen from "../assets/images/pen.png"
+import Translate from "../assets/images/translate.png"
+import Dev from "../assets/images/code.png"
+---
+
+<section id="services">
+  <h2 class="subtitle">Ficou na duvida ?</h2>
+  <h1 class="title">Veja nossos serviços.</h1>
+  <section class="services-cards">
+    <article class="card-service">
+      <Image
+        src={Pen}
+        height={500}
+        width={500}
+        alt="Icone de um pincel"
+        class="img"
+      />
+      <h1 class="title">Design</h1>
+      <p class="p">
+        Design simples ou complexo para o seu feito para o seu negócio
+      </p>
+      <h2 class="subtitle">Criamos para você</h2>
+      <p class="p">
+        Apps, websites, logos, ilustrações, UX/UI, modelos 3D e animações.
+      </p>
+      <h2 class="subtitle">Ferramentas de design:</h2>
+      <div class="items">
+        <a href="">Photoshop</a>
+        <a href="">Krita</a>
+        <a href="">Figma</a>
+        <a href="">Blender</a>
+        <a href="">Miro</a>
+        <a href="">Figjam</a>
+        <a href="">Skechup</a>
+        <a href="">Canva</a>
+      </div>
+    </article>
+    <article class="card-service">
+      <Image
+      src={Dev}
+      height={500}
+      width={500}
+      alt="Icone de um <>"
+      class="img"
+    />
+      <h1 class="title">Desenvolvimento</h1>
+      <p class="p">
+        Sites e aplicativos feitos por nós especialmente para você
+      </p>
+      <h2 class="subtitle">Criamos para você</h2>
+      <p class="p">Apps, websites, jogos, banco de dados e Bots</p>
+      <h2 class="subtitle">Nossas habilidades:</h2>
+      <div class="items">
+        <a href="">HTML5 e CSS</a>
+        <a href="">Javascript e Typescript</a>
+        <a href="">Golang</a>
+        <a href="">C#</a>
+        <a href="">SQL</a>
+        <a href="">PHP</a>
+        <a href="">Skechup</a>
+        <a href="">Canva</a>
+      </div>
+    </article>
+    <article class="card-service">
+      <Image
+      src={Translate}
+      height={500}
+      width={500}
+      alt="Icone de um tradutor"
+      class="img"
+    />
+      <h1 class="title">Traduções</h1>
+      <p class="p">Vamos te ajudar com nossa equipe de tradutores</p>
+      <h2 class="subtitle">Idiomas:</h2>
+      <p class="p">ENG-USA</p>
+      <p class="p">PT-BR</p>
+      <h2 class="subtitle">Podemos traduzir:</h2>
+      <div class="items">
+        <a href="">Séries</a>
+        <a href="">Livros</a>
+        <a href="">Quadrinhos</a>
+        <a href="">Filmes</a>
+        <a href="">Jogos</a>
+        <a href="">Websites</a>
+        <a href="">Reuniões</a>
+        <a href="">Documentos</a>
+      </div>
+    </article>
+  </section>
+</section>

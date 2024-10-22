@@ -1,0 +1,56 @@
+@use "../fonts";
+@use "../colors.scss";
+
+#team {
+  min-height: 100vh;
+  background-color: colors.$dark-color;
+  color: colors.$light-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    .buttons {
+      height: 100vh !important;
+    }
+  }
+  .initial-title {
+    color: colors.$light-color;
+    margin-top: 40px;
+    font-family: fonts.$avenir;
+    font-size: 2em;
+  }
+  .initial-subtitle {
+    color: #4ba9ff;
+    font-family: fonts.$avenir;
+  }
+  .buttons {
+    background-color: colors.$brand-color;
+    width: 100%;
+    height: 50vh;
+    a {
+      color: colors.$light-color;
+    }
+  }
+
+  .carousel {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    .carousel-container {
+      display: flex;
+      width: 900px;
+      gap: 20px;
+      .carousel-item {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+      }
+    }
+  }
+}

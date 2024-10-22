@@ -52,11 +52,6 @@
 #about_mobile {
     width: 85%;
     margin: auto;
-
-    .images {
-
-    }
-
     img {
         object-fit: contain;
     }
@@ -64,7 +59,7 @@
 
 .subtle {
     display: block;
-    color: #2B449F;
+    color: colors.$dark-blue-color;
 
     font-size: 0.8em;
 }

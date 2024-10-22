@@ -1,0 +1,70 @@
+@use "../fonts";
+@use "../colors.scss";
+#services {
+  min-height: 150vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subtitle {
+    font-family: fonts.$montserrat;
+    color: colors.$brand-color;
+  }
+  .title {
+    font-size: 2em;
+    font-family: fonts.$avenir;
+  }
+  .subtitle:nth-child(1){
+    margin-top: 200px;
+  }
+  .services-cards {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: space-between;
+    .card-service {
+      display: flex;
+   
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      width: 353px;
+      min-height: 700px;
+  
+      gap: 15px;
+      background-color: colors.$gray-color;
+      border: 3px solid colors.$border-color;
+      border-radius: 10px;
+      .img{
+        margin: 40px;
+        width: 59px;
+        height: auto;
+      }
+      .items{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 30px;
+        a {
+          text-decoration: none;
+          color: colors.$dark-color;
+          font-family: fonts.$montserrat;
+          font-weight: 800;
+        }
+      }
+
+      .p {
+        margin: 10px;
+        font-family: fonts.$montserrat;
+        text-align: center;
+      }
+      @media screen and (min-width: 1024px) {
+        width: 400px;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+}

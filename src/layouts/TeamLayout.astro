@@ -1,0 +1,40 @@
+---
+import TeamComponent from "../components/TeamComponent";
+import Favicon from "/favicon.svg";
+import "../styles/layouts/TeamLayout.scss";
+const team: Array<Object> = [
+  {
+    name: "Vinicius",
+    skills: "CSS3, HTML5, JS, Java (colocar o resto)",
+    biography:
+      "Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia ",
+    image: "/favicon.svg",
+  },
+  {
+    name: "Vinicius",
+    skills: "CSS3, HTML5, JS, Java (colocar o resto)",
+    biography:
+      "Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia ",
+    image: "",
+  },
+  {
+    name: "Vinicius",
+    skills: "CSS3, HTML5, JS, Java (colocar o resto)",
+    biography:
+      "Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia ",
+    image: "",
+  },
+];
+---
+
+<section id="team">
+  <article>
+    <h1 class="initial-title">Nossa equipe</h1>
+    <h2 class="initial-subtitle">Quem está por trás da mágica.</h2>
+  </article>
+  <TeamComponent team={team} />
+  <div class="buttons">
+    <a href="">Left</a>
+    <a href="">Right</a>
+  </div>
+</section>

@@ -79,14 +79,14 @@
     display: none;
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1180px) {
     .pc{
         visibility: visible;
         display: flex;
         width: 380px !important;
     }   
 }
-@media screen and (max-width:1024px){
+@media screen and (max-width:1179px){
         .mobile{
             visibility: visible !important;
             display: flex;

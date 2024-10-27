@@ -2,13 +2,14 @@
 import TeamComponent from "../components/TeamComponent";
 import Favicon from "/favicon.svg";
 import "../styles/layouts/TeamLayout.scss";
+import SvgArrow from "../components/SvgArrow.astro";
 const team: Array<Object> = [
   {
     name: "Vinicius",
-    skills: "CSS3, HTML5, JS, Java (colocar o resto)",
+    skills: "Javascript, Python e Go",
     biography:
-      "Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia ",
-    image: "/favicon.svg",
+      "Sou Vinicius Henrique, programador e administrador da +Tech, tento ao máximo ser proativo e ajudar em tudo que posso. ",
+    image: "/images/vinicius.png",
   },
   {
     name: "Vinicius",
@@ -28,13 +29,22 @@ const team: Array<Object> = [
 ---
 
 <section id="team">
-  <article>
+  <article class="team-header">
     <h1 class="initial-title">Nossa equipe</h1>
     <h2 class="initial-subtitle">Quem está por trás da mágica.</h2>
   </article>
-  <TeamComponent team={team} />
-  <div class="buttons">
-    <a href="">Left</a>
-    <a href="">Right</a>
-  </div>
+  <section class="team-container">
+    <button class="btn pc"><SvgArrow arrowDirection="Left" /></button>
+    <TeamComponent team={team} />
+    <div class="buttons mobile">
+      <button class="btn"><SvgArrow arrowDirection="Left" /> </button>
+      <div class="counter">
+        <p>1</p>
+        <p>de</p>
+        <p>1</p>
+      </div>
+      <button class="btn"><SvgArrow arrowDirection="Right" /></button>
+    </div>
+    <button class="btn pc"><SvgArrow arrowDirection="Right" /></button>
+  </section>
 </section>

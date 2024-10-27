@@ -1,5 +1,4 @@
 import React from 'react'
-import Studio21 from "../assets/images/studio-mobile.png"
 
 const CarouselComponent = () => {
   return (

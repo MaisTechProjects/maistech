@@ -12,7 +12,7 @@ const TeamComponent = ({ team }: TeamProps) => {
           return (
             <>
               <article className="carousel-item">
-                <article className="carousel-texts">
+                <article className="carousel-header">
                   <h1 className="title">{item.name}</h1>
                   <h2 className="subtitle">{item.skills}</h2>
                   <p className="biography">{item.biography}</p>
@@ -20,7 +20,13 @@ const TeamComponent = ({ team }: TeamProps) => {
                     Acesse o site
                   </a>
                 </article>
-                <div className="image">.</div>
+                <img
+                  className="img mobile"
+                  src={item.image}
+                  height={300}
+                  width={300}
+                  alt={item.name}
+                />
               </article>
               {/* <img className="image" src={item.image} height={300} width={300} alt={item.name}/> */}
             </>

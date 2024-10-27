@@ -1,56 +1,94 @@
 @use "../fonts";
 @use "../colors.scss";
 
-#footer{
-    background-color: colors.$darker-color;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding: 16px;
-    height: 70vh;
-    .footer-container{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        font-family: fonts.$montserrat;
-        .logo{
-            width: 170px;
-            height: auto;
-            object-fit: contain;
-        }
-        .description{
-            color:colors.$mid-color;
-        }
-        .telephone{
-            border: 2px solid colors.$light-color;
-            padding: 14px;
-            font-size: 1em;
-            width: 220px;
-            gap: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: auto;
-            border-radius: 80px;
-        }
-
-        a{
-            text-decoration: none;
-            color: colors.$light-color;
-        }
-        .information{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            a{
-                color: colors.$mid-color;
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                img{
-                    fill: colors.$mid-color;
-                }
-            }
-        }
+#footer {
+  background-color: colors.$darker-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  min-height: 70vh;
+  overflow-x: hidden;
+  margin-top: 5px;
+  @media screen and (min-width: 1200px) {
+    .pc-flex {
+      justify-content: space-between;
+      display: flex;
+      margin-left: 70px;
+      margin-right: 70px;
     }
+  }
+  .separator {
+    border: 2px solid white;
+    margin-bottom: 60px;
+    @media screen and (max-width: 1200px) {
+      margin: 20px;
+      border: 2px solid colors.$mid-color;
+    }
+  }
+  .slogan {
+    width: 100%;
+    height: auto;
+  }
+  .footer-container {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    gap: 20px;
+    font-family: fonts.$montserrat;
+    .logo {
+      width: 170px;
+      height: auto;
+      object-fit: contain;
+      @media screen and (min-width: 1100px) {
+        width: 210px;
+      }
+    }
+    .description {
+      color: colors.$mid-color;
+      @media screen and (min-width: 1100px) {
+        width: 360px;
+        font-size: 1.2em;
+      }
+    }
+    .telephone {
+      border: 2px solid colors.$light-color;
+      padding: 14px;
+      font-size: 1em;
+      width: 220px;
+      gap: 12px;
+      display: flex;
+      align-items: center;
+
+      height: auto;
+      border-radius: 80px;
+      @media screen and (min-width: 1100px) {
+        font-size: 1.2em;
+        gap: 20px;
+        width: 280px;
+        height: 50px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: colors.$light-color;
+    }
+    .information {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      a {
+        color: colors.$mid-color;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @media screen and (min-width: 1100px) {
+          font-size: 1.2em;
+        }
+        img {
+          fill: colors.$mid-color;
+        }
+      }
+    }
+  }
 }

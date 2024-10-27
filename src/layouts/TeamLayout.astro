@@ -5,21 +5,28 @@ import "../styles/layouts/TeamLayout.scss";
 import SvgArrow from "../components/SvgArrow.astro";
 const team: Array<Object> = [
   {
-    name: "Vinicius",
+    name: "Vinicius Henrique",
     skills: "Javascript, Python e Go",
     biography:
       "Sou Vinicius Henrique, programador e administrador da +Tech, tento ao máximo ser proativo e ajudar em tudo que posso. ",
-    image: "/images/vinicius.png",
+    image: "/images/vinicius-mobile.png",
   },
   {
-    name: "Vinicius",
+    name: "Victor Reis",
     skills: "CSS3, HTML5, JS, Java (colocar o resto)",
     biography:
       "Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia ",
     image: "",
   },
   {
-    name: "Vinicius",
+    name: "Flávia",
+    skills: "CSS3, HTML5, JS, Java (colocar o resto)",
+    biography:
+      "Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia ",
+    image: "",
+  },
+  {
+    name: "Luiz Felipe",
     skills: "CSS3, HTML5, JS, Java (colocar o resto)",
     biography:
       "Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia ",
@@ -41,7 +48,7 @@ const team: Array<Object> = [
       <div class="counter">
         <p>1</p>
         <p>de</p>
-        <p>1</p>
+        <p>{team.length}</p>
       </div>
       <button class="btn"><SvgArrow arrowDirection="Right" /></button>
     </div>

@@ -21,6 +21,13 @@ const TeamComponent = ({ team }: TeamProps) => {
                   </a>
                 </article>
                 <img
+                  className="img pc"
+                  src={item.image}
+                  height={300}
+                  width={300}
+                  alt={item.name}
+                />
+                <img
                   className="img mobile"
                   src={item.image}
                   height={300}

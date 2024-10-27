@@ -1,27 +1,79 @@
 ---
-import { Image } from "astro:assets"
-import "../styles/layouts/Footer.scss"
-import InstaSVG from "../assets/images/insta.svg"
-import WhatsSVG from "../assets/images/whats.svg"
-import EmailSVG from "../assets/images/email.svg"
-import TelephoneSVG from "../assets/images/telephone.svg"
-import Logo from "../assets/images/logo_escrita.png"
-
+import { Image } from "astro:assets";
+import "../styles/layouts/Footer.scss";
+import InstaSVG from "../assets/images/insta.svg";
+import WhatsSVG from "../assets/images/whats.svg";
+import EmailSVG from "../assets/images/email.svg";
+import TelephoneSVG from "../assets/images/telephone.svg";
+import Logo from "../assets/images/logo_escrita.png";
+import Slogan from "../assets/images/slogan_torto.png";
+import SloganPC from "../assets/images/slogan-pc.png";
 ---
 
 <footer id="footer">
-  <article class="footer-container">
-    <Image src={Logo} height={1000} width={1000} class="logo" alt={"Icone de um email"}/>
-    <p class="description">
-      Somos uma startup que tem como objetivo desenvolvimento web e design,
-      vamos deixar a sua empresa atualizada e com uma identidade visual de alta
-      qualidade.
-    </p>
-    <a class="telephone"><Image src={TelephoneSVG} height={30} width={30} alt={"Icone de um telefone"}/>+55 41 9838-1881</a>
-    <div class="information">
-        <a href=""><Image src={EmailSVG} height={30} width={30} alt={"Icone de um email"}/>maistect@gmail.com</a>
-        <a href=""><Image src={WhatsSVG} height={30} width={30} alt={"Icone do Whatsapp"}/>+55 41 9838-1881</a>
-        <a href=""><Image src={InstaSVG} height={30} width={30} alt={"Icone do Instagram"}/>instagram.com/maistect/</a>
-    </div>
+  <article class="pc-flex">
+    <Image
+      src={Slogan}
+      height={2000}
+      width={2000}
+      class="slogan mobile"
+      alt={"Icone de um email"}
+    />
+    <article class="footer-container">
+      <Image
+        src={Logo}
+        height={1000}
+        width={1000}
+        class="logo"
+        alt={"Logo tipo da +Tech escrita"}
+      />
+      <p class="description">
+        Somos uma startup que tem como objetivo desenvolvimento web e design,
+        vamos deixar a sua empresa atualizada e com uma identidade visual de
+        alta qualidade.
+      </p>
+      <a class="telephone"
+        ><Image
+          src={TelephoneSVG}
+          height={30}
+          width={30}
+          alt={"Icone de um telefone"}
+        />+55 41 9838-1881</a
+      >
+      <div class="information">
+        <a href=""
+          ><Image
+            src={EmailSVG}
+            height={30}
+            width={30}
+            alt={"Icone de um email"}
+          />maistect@gmail.com</a
+        >
+        <a href=""
+          ><Image
+            src={WhatsSVG}
+            height={30}
+            width={30}
+            alt={"Icone do Whatsapp"}
+          />+55 41 9838-1881</a
+        >
+        <a href=""
+          ><Image
+            src={InstaSVG}
+            height={30}
+            width={30}
+            alt={"Icone do Instagram"}
+          />instagram.com/maistect/</a
+        >
+      </div>
+    </article>
+    <Image
+      src={SloganPC}
+      height={2000}
+      width={2000}
+      class="slogan pc"
+      alt={"Icone de um email"}
+    />
   </article>
+  <div class="separator"></div>
 </footer>

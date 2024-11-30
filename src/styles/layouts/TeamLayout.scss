@@ -2,55 +2,82 @@
 @use "../colors.scss";
 
 #team {
-  min-height: 100vh;
+  background-image: url("../../assets/images/team_hd.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: colors.$darker-color;
   color: colors.$light-color;
+
   display: flex;
   flex-direction: column;
+  align-items: start;
+
+  min-height: 120vh;
+  width: 100%;
+
   gap: 20px;
-  .counter{
+  .counter {
     display: flex;
-    gap: 10px;
     align-items: center;
     justify-content: center;
+
     font-size: 1.4em;
     font-family: fonts.$avenir;
+
+    gap: 10px;
     margin: 20px;
   }
   .btn {
     background-color: transparent;
+
     border: none;
   }
   .team-header {
     display: flex;
     flex-direction: column;
-    text-align: center;
+
+    text-align: start;
+
     gap: 15px;
-    margin-bottom: 50px;
+
+    margin: 50px 10px 40px 80px;
+
     .initial-title {
       color: colors.$light-color;
+
       margin-top: 40px;
+
       font-family: fonts.$avenir;
       font-size: 2em;
     }
     .initial-subtitle {
       color: #4ba9ff;
+
       font-family: fonts.$avenir;
     }
   }
   .team-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 71% 1fr;
+    justify-content: space-between;
     align-items: center;
-    @media screen and (max-width:1200px) {
-      .buttons{
-        z-index: 0;
+
+    margin: 20px;
+    width: 100%;
+
+    @media screen and (max-width: 1200px) {
+      .buttons {
         display: flex;
         align-items: end;
-        padding: 20px;
         justify-content: center;
+
+        z-index: 0;
+
         background-color: colors.$brand-color;
+
+        padding: 20px;
+
         width: 100%;
         height: 20vh;
       }
@@ -59,63 +86,60 @@
       flex-direction: row;
     }
   }
-  .carousel {
+  .carousel-content {
     display: flex;
-    width: 380px;
-    overflow: hidden;
-    .img {
-      position: relative;
-      width: 100%;
-      height: auto;
-      top: 60px;
-      background-color: colors.$brand-color;
-  
-    }
-    .carousel-container {
-      display: flex;
+    flex-direction: column;
 
-      width: max-content;
-      gap: 20px;
-      .carousel-item {
-        width: 380px;
-        margin: 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
-        .carousel-header {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-          .title,
-          .subtitle {
-            text-decoration: none;
-            color: colors.$light-color;
-          }
-          .subtitle,
-          .biography {
-            font-weight: 400;
-            font-family: fonts.$montserrat;
-          }
-          a {
-            border: 2px solid colors.$light-color;
-            border-radius: 35px;
-            width: 150px;
-            height: auto;
-            padding: 10px;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            color: colors.$light-color;
-          }
-          @media screen and (max-width: 1080px) {
-            a {
-              display: none;
-            }
-          }
-        }
+   
+    width: 100%;
+    .arrow{
+      max-width: 50px;
+      background-color: transparent;
+      border: none;
+    }
+    .carousel-header {
+      display: flex;
+      flex-direction: column;
+
+      width: 400px;
+
+      .title {
+        color: colors.$light-color;
+
+        font-size: 50px;
+      }
+      .description {
+        font-size: 20px;
+
+        margin-bottom: 20px;
+
+        width: 400px;
+      }
+      .acess {
+        width: 240px;
+
+        border: 2px solid colors.$light-color;
+      }
+    }
+   
+    .img {
+      width: 200px;
+      height: auto;
+      object-fit: contain;
+      @media screen and (min-width: 1024px) {
+        position: absolute;
+
+        width: 340px;
+        height: 340px;
+
+        object-fit: cover;
+
+        transform: translate(650px, -60px);
       }
     }
   }
+}
+
+.animation{
+  animation-timing-function: cubic-bezier(0.42, 0, 1, 1); 
 }

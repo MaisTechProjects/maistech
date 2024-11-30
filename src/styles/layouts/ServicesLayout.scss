@@ -23,12 +23,12 @@
     gap: 10px;
     text-align: center;
     justify-content: space-between;
-    @media screen and (max-width:1280px) {
+    @media screen and (max-width:1020px) {
       .card-service:nth-child(3){
         margin-bottom: 100px;
       }
     }
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width:1021px) {
         margin-bottom: 100px;
     } 
     .card-service {
@@ -67,11 +67,11 @@
         font-family: fonts.$montserrat;
         text-align: center;
       }
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 1240px) {
         width: 400px;
       }
     }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1239px) {
       flex-direction: column;
     }
   }

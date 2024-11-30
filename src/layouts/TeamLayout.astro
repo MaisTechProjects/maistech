@@ -3,6 +3,9 @@ import TeamComponent from "../components/TeamComponent";
 import Favicon from "/favicon.svg";
 import "../styles/layouts/TeamLayout.scss";
 import SvgArrow from "../components/SvgArrow.astro";
+import Image from "astro/components/Image.astro";
+
+import Vinicius from "../assets/images/vinicius.png";
 const team: Array<Object> = [
   {
     name: "Vinicius Henrique",
@@ -40,18 +43,107 @@ const team: Array<Object> = [
     <h1 class="initial-title">Nossa equipe</h1>
     <h2 class="initial-subtitle">Quem está por trás da mágica.</h2>
   </article>
-  <section class="team-container">
-    <button class="btn pc"><SvgArrow arrowDirection="Left" /></button>
-    <TeamComponent team={team} />
-    <div class="buttons mobile">
-      <button class="btn"><SvgArrow arrowDirection="Left" /> </button>
-      <div class="counter">
-        <p>1</p>
-        <p>de</p>
-        <p>{team.length}</p>
+  <section class="carousel-content">
+    <article class="carousel-header">
+      <h1 class="title" id="carousel-title">Vinicius</h1>
+      <p class="badges"></p>
+      <p class="description" id="carousel-description">
+        Sou Vinicius Henrique, programador e administrador da +Tech, tento ao
+        máximo ser proativo e ajudar em tudo que posso.
+      </p>
+      <button class="btn acess">Acesse o site</button>
+    </article>
+    <Image
+      src={Vinicius}
+      alt="Vinicius Henrique desenvolvedor da +Tech"
+      height={1000}
+      width={1000}
+      class="img animation"
+      id="carousel-img"
+    />
+    <section class="team-container">
+      <button class="pc arrow" id="left-pc"
+        ><SvgArrow arrowDirection="Left" /></button
+      >
+
+      <div class="buttons mobile">
+        <button class="btn"><SvgArrow arrowDirection="Left" /> </button>
+        <div class="counter">
+          <p>1</p>
+          <p>de</p>
+          <p>{team.length}</p>
+        </div>
+        <button class="btn"><SvgArrow arrowDirection="Right" /></button>
       </div>
-      <button class="btn"><SvgArrow arrowDirection="Right" /></button>
-    </div>
-    <button class="btn pc"><SvgArrow arrowDirection="Right" /></button>
+      <button class="arrow pc" id="right-pc"
+        ><SvgArrow arrowDirection="Right" /></button
+      >
+    </section>
   </section>
+  <script>
+    const name = document.querySelector("#carousel-title");
+    const description = document.querySelector("#carousel-description");
+    const leftButton = document.querySelector("#left-pc");
+    const rightButton = document.querySelector("#right-pc");
+    const carouselImg = document.querySelector("#carousel-img");
+
+    let counter = 0;
+
+    const team = [
+      {
+        name: "Vinicius Henrique",
+        skills: "Javascript, Python e Go",
+        biography:
+          "Sou Vinicius Henrique, programador e administrador da +Tech, tento ao máximo ser proativo e ajudar em tudo que posso. ",
+        image: "/images/vinicius.jpeg",
+      },
+      {
+        name: "Victor Reis",
+        skills: "CSS3, HTML5, JS, Java (colocar o resto)",
+        biography:
+          "Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia ",
+        image: "/images/victor.png",
+      },
+      {
+        name: "Miguel Henrique",
+        skills: "CSS3, HTML5, JS, Java (colocar o resto)",
+        biography:
+          "Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia ",
+        image: "/images/miguel.png",
+      },
+      {
+        name: "Flávia",
+        skills: "CSS3, HTML5, JS, Java (colocar o resto)",
+        biography:
+          "Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia ",
+        image: "/images/vinicius.jpeg",
+      },
+      {
+        name: "Gabriel",
+        skills: "CSS3, HTML5, JS, Java (colocar o resto)",
+        biography:
+          "Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia Biografia ",
+        image: "/images/gabriel.png",
+      },
+    ];
+
+    if (name) name.innerHTML = team[0].name;
+    if (carouselImg) carouselImg.setAttribute("src", team[0].image);
+    if (description) description.innerHTML = team[0].biography;
+
+    leftButton?.addEventListener("click", () => {
+      counter < team.length ? counter > 0 && counter - 1 : (counter = 3);
+
+      if (name) name.innerHTML = team[counter].name;
+      if (carouselImg) carouselImg.setAttribute("src", team[counter].image);
+      if (description) description.innerHTML = team[counter].biography;
+    });
+    rightButton?.addEventListener("click", () => {
+      counter < team.length ? (counter = counter + 1) : (counter = 0);
+
+      if (name) name.innerHTML = team[counter].name;
+      if (carouselImg) carouselImg.setAttribute("src", team[counter].image);
+      if (description) description.innerHTML = team[counter].biography;
+    });
+  </script>
 </section>

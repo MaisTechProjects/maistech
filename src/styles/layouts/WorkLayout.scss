@@ -15,7 +15,7 @@
     background-color: colors.$brand-color;
     color: colors.$light-color;
     font-size: 1.7em;
-    @media screen and (max-width:1180px) {
+    @media screen and (max-width:1239px) {
       font-size: 1.2em;
       margin-bottom: 5em;
     }
@@ -24,7 +24,7 @@
     font-family: fonts.$avenir;
     color: colors.$dark-color;
     font-size: 34px;
-    @media screen and (min-width: 1180px) {
+    @media screen and (min-width: 1240px) {
       font-size: 50px;
     }
   }
@@ -47,7 +47,7 @@
     .pc {
       display: none;
     }
-    @media screen and (min-width: 1180px) {
+    @media screen and (min-width: 1240px) {
       width: 85%;
       height: 300px;
       .mobile {
@@ -71,7 +71,7 @@
         margin-top: 20px;
         text-align: center;
         color: colors.$dark-color;
-        @media screen and (min-width: 1180px) {
+        @media screen and (min-width: 1240px) {
           translate: -160px 10px;
           text-align: start;
         }
@@ -80,7 +80,7 @@
         text-align: center;
 
         font-family: fonts.$montserrat;
-        @media screen and (min-width: 1180px) {
+        @media screen and (min-width:1240px) {
           translate: -160px 20px;
           text-align: start !important;
         }
@@ -103,7 +103,7 @@
       font-size: 20px;
       background-color: transparent;
       height: 45px;
-      @media screen and (min-width: 1180px) {
+      @media screen and (min-width:1240px) {
         translate: -130% 320%;
       }
     }
@@ -119,7 +119,7 @@
       text-align: center;
       transform: translateY(300px);
       background-color: transparent;
-      @media screen and (min-width: 1180px) {
+      @media screen and (min-width: 1240px) {
         transform: translateY(0px);
         translate: -130% 290% !important;
       }

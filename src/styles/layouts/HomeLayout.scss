@@ -1,98 +1,109 @@
 @use "../fonts";
 @use "../colors.scss";
-#home{
-    background-image: url("../../assets/images/bg-mobile.png");
-    min-height: 100vh;
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+
+
+  #home-video {
+    min-width: 100%;
+    min-height: 110vh;
+
+    position: absolute;
+
+    z-index: -1;
+    object-fit: cover;
+
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+  }
+  @media screen and (min-width: 1240px) {
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 70px;
+
+    padding-top: 10px;
+    .home-container {
+      justify-content: baseline !important;
+      align-items: baseline;
+    }
+    .title {
+      text-align: left !important;
+      font-size: 50px !important;
+      width: 770px;
+    }
+    .subtitle {
+      text-align: left !important;
+      width: 700px;
+    }
+  }
+  .title {
+    font-size: clamp(34px, 100%, 62px);
+    font-family: fonts.$avenir;
+    font-weight: 800;
+
+    text-align: center;
+    
+    margin-top: 30px;
+    color: colors.$light-color;
+  }
+  .subtitle {    
+    text-align: center;
+
+    font-size: 22px;
+    font-family: fonts.$montserrat;
+
+    color: colors.$light-color;
+  }
+  .btn{
+    margin-top: 20px;
+  }
+  .img {
+    margin-top: 4em ;
+    width: 200px;
+    height: auto;
+  }
+  .home-container {
     display: flex;
+      
     flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
-    @media screen and (min-width:1024px) {
-        background-image: url("../../assets/images/bg-pc.png");
-        flex-direction: row;
-        gap: 70px;
-        justify-content: center;
-        padding-top: 10px;
-        .home-container{
-            justify-content: baseline !important;
-            align-items: baseline;
-            
-        }
-        .title{
-            text-align: left !important;
-            font-size: 50px !important;
-            width: 770px;
-        }
-        .subtitle{
-            text-align: left !important;
-            width: 700px;
-        }
+
+    margin: 30px;
+
+    gap: 15px;
+
+    @media screen and (max-width: 1239px) {
+      justify-content: center;
+      align-items: center;
     }
-    .title{
-        font-size: clamp(34px, 100%, 62px);
-        font-family: fonts.$avenir;
-        font-weight: 800;
-        text-align: center;
-        margin: 4px;
-        color: colors.$light-color;
-    }
-    .subtitle{
-        margin: 5px;
-        font-size: 20px;
-        text-align: center;
-        color: colors.$light-color;
-        font-family: fonts.$montserrat;
-    }
-    .btn{
-        background-color: transparent;
-        color: colors.$light-color;
-        font-weight: 800;
-        font-family: fonts.$montserrat;
-        font-size:  24px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-radius: 35px;
-        border: 2px solid colors.$light-color;
-    }
-    .img{
-        width: 250px;
-        height: auto;
-    }
-    .home-container{
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        @media screen and (max-width:768px) {
-            
-        justify-content: center;
-        align-items: center;
-        }
-    }
+  }
 }
-.mobile{
-    visibility: hidden;
-    display: none;
+.mobile {
+  visibility: hidden;
+  display: none;
 }
 
-@media screen and (min-width:1180px) {
-    .pc{
-        visibility: visible;
-        display: flex;
-        width: 380px !important;
-    }   
+@media screen and (min-width: 1240px) {
+  .pc {
+    visibility: visible;
+
+    display: flex;
+
+    width: 380px !important;
+  }
 }
-@media screen and (max-width:1179px){
-        .mobile{
-            visibility: visible !important;
-            display: flex;
-        }
-        .pc{
-            display: none;
-            visibility: hidden;
-        }
+@media screen and (max-width: 1239px) {
+  .mobile {
+    visibility: visible !important;
+    display: flex;
+  }
+  .pc {
+    display: none;
+    visibility: hidden;
+  }
 }

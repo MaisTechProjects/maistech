@@ -2,18 +2,19 @@
 @use "../colors.scss";
 
 .title {
-    font-size: 2em;
-    color:colors.$dark-color;
-    font-family: fonts.$avenir;
+  font-size: 2em;
+  color: colors.$dark-color;
+  font-family: fonts.$avenir;
 
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .description {
-    font-family: fonts.$montserrat;
+  font-family: fonts.$montserrat;
 }
 
 #about {
+  @media screen and (min-width: 769px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -23,44 +24,46 @@
 
     width: 85%;
     margin: auto;
+  }
 
-    @media screen and (max-width: 600px) {
-        article:nth-child(1) {
-            grid-column: 1 / -1;
-        }
-          
-        article:nth-child(2) {
-            grid-column: 1;
-            text-align: end;
-        }
-          
-        article:nth-child(3) {
-            grid-column: 2;
-        }
-          
-        article:nth-child(n+4) {
-            grid-column: 1 / -1;
-        }
+  @media screen and (max-width: 768px) {
+    .img {
+      display: none !important;
     }
-
-    img {
-        object-fit: contain;
-        max-width: 100%;
+    .about-card:last-child {
+      text-align: end;
+      justify-content: end;
+      
+      margin-top: 50px;
     }
+    .about-card {
+        margin: 30px;
+      .title {
+        width: 100%;
+      }
+      .description {
+        width: 100%;
+      }
+    }
+  }
 
+  img {
+    object-fit: contain;
+    max-width: 100%;
+  }
 }
 
 #about_mobile {
-    width: 85%;
-    margin: auto;
-    img {
-        object-fit: contain;
-    }
+  width: 85%;
+  margin: auto;
+  img {
+    object-fit: contain;
+  }
 }
 
 .subtle {
-    display: block;
-    color: colors.$dark-blue-color;
+  display: block;
+  color: colors.$dark-blue-color;
 
-    font-size: 0.8em;
+  font-size: 0.8em;
 }

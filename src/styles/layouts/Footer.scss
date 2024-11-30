@@ -9,7 +9,21 @@
   min-height: 70vh;
   overflow-x: hidden;
   margin-top: 5px;
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 899px) {
+    .mobile {
+      display: flex !important;
+      width: 100% !important;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    .mobile {
+      display: none !important;
+    }
+    .pc {
+      visibility: visible;
+      display: flex !important;
+    }
+   
     .pc-flex {
       justify-content: space-between;
       display: flex;
@@ -20,13 +34,13 @@
   .separator {
     border: 2px solid white;
     margin-bottom: 60px;
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 899px) {
       margin: 20px;
       border: 2px solid colors.$mid-color;
     }
   }
   .slogan {
-    width: 100%;
+    width: 300px;
     height: auto;
   }
   .footer-container {
@@ -39,13 +53,13 @@
       width: 170px;
       height: auto;
       object-fit: contain;
-      @media screen and (min-width: 1100px) {
+      @media screen and (min-width: 900px) {
         width: 210px;
       }
     }
     .description {
       color: colors.$mid-color;
-      @media screen and (min-width: 1100px) {
+      @media screen and (min-width: 900px) {
         width: 360px;
         font-size: 1.2em;
       }
@@ -61,7 +75,7 @@
 
       height: auto;
       border-radius: 80px;
-      @media screen and (min-width: 1100px) {
+      @media screen and (min-width: 900px) {
         font-size: 1.2em;
         gap: 20px;
         width: 280px;
@@ -82,7 +96,7 @@
         display: flex;
         align-items: center;
         gap: 20px;
-        @media screen and (min-width: 1100px) {
+        @media screen and (min-width: 900px) {
           font-size: 1.2em;
         }
         img {

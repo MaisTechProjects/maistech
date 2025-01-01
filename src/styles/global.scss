@@ -9,30 +9,11 @@
 }
 
 body {
-  background-color: colors.$light-color;
-}
+  background-color: #F4F4F4;
+  color: black;
+  font-family: fonts.$inter;
 
-
-
-.btn {
-  font-size: 24px;
-  font-weight: 800;
-  font-family: fonts.$montserrat;
-
-  background-color: colors.$brand-color;
-  color: colors.$light-color;
-
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-  border-radius: 35px;
-
-  border: transparent;
-
-  transition-duration: 150ms;
-}
-.btn:hover {
-  opacity: 0.8;
+  h1, h2, h3 {
+    font-family: fonts.$montserrat;
+  }
 }

@@ -1,3 +1,24 @@
 ---
-
+import { Image } from 'astro:assets'
+import Logo from '../assets/images/mais-tech-logo.svg' 
+import '../styles/navbar.scss'
 ---
+
+<nav id="navbar" class="navbar">
+    <div class="nav-logo">
+        <Image 
+        src={Logo} 
+        alt="Mais Tech" 
+        width="229"
+        height="44"
+        />
+    </div>
+    <div id="nav-links">
+        <a href="#quem-somos" class="nav-link">Quem somos</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+    </div>
+    <div>
+        <a href="#contato" class="nav-button">Fazer orçamento</a>
+    </div>
+</nav>

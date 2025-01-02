@@ -1,18 +1,16 @@
 ---
-import "../styles/global.scss";
-import FooterLayout from "./FooterLayout.astro";
+
 ---
 
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>+Tech</title>
-  </head>
-  <body>
-    <slot />
-    <FooterLayout/>
-  </body>
+<!DOCTYPE html />
+
+<html lang="pt-br">
+    <head>
+        <slot name="head" />
+    </head>
+    <body>
+        <div id="site-container">
+            <slot name="body" />
+        </div>
+    </body>
 </html>

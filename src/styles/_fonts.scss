@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@font-face {
-    font-family: 'avenir';
-    src: url('/fonts/AvenirLTProBlack.otf');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-$avenir:"avenir", sans-serif;
-$montserrat:"Montserrat", sans-serif;
+$inter: "Inter", sans-serif;
+$montserrat: "Montserrat", sans-serif;

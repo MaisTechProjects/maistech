@@ -4,52 +4,128 @@
 .navbar {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    max-width: 1945px;
+
+    margin: auto;
+
     background-color: #F4F4F4;
     color: colors.$mid-color;
     padding: 1rem;
+    padding-top: 1.2rem;
 }
+
 .nav-logo {
     display: block;
 }
+
 #nav-links {
     display: flex;
-    a{
-        display: block;
-    }
-    background-color: white;
-    border-radius: 49px;
-    padding: 20px;
-    width: 620px;
-    height: 7px;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
+
+    background-color: white;
+    border-radius: 49px;
+    padding: 7px 26px;
+
+
+    a {
+        display: block;
+    }
+
+    .separator {
+        background-color: #E1E1E1;
+        width: 1.5px;
+        height: 20px;
+    }
 }
+
 .nav-link {
     color: #7E7E7E;
     text-align: center;
+    text-decoration: none;
+
+    padding: 0;
+
     font-family: fonts.$montserrat;
-    font-size: 1.563em;
+    font-size: 1.163em;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    text-decoration: none;
-    padding: 20px;
     font-weight: bold;
 }
-.nav-button{
-    background-color: #0264BE;
-    text-decoration: none;
+
+.nav-button {
     display: flex;
-    border-radius: 30px;
-    width: 280px;
-    padding: 7px 0px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    font-size: 1.563em;
-    color: white;
+
+    width: 280px;
+
+    border-radius: 30px;
+    padding: 7px 0;
+    
+    font-size: 1.163em;
     font-family: fonts.$montserrat;
     font-weight: bold;
-    
+    white-space: nowrap;
+
+    color: white;
+    background-color: #0264BE;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1053px) {
+    .nav-link {
+        font-size: 1.05em;
+    }
+}
+
+@media screen and (max-width: 984px) {
+    .nav-button {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 883px) {
+    .navbar {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .nav-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 712px) {
+    .navbar {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.9em;
+        margin: auto;
+    }
+
+    .nav-logo {
+        width: calc(120.23px * 0.75);
+        height: auto;
+        transform: scale(0.75, 0.75);
+
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .navbar {
+        gap: 0;
+    }
+
+    .nav-logo {
+        display: none;
+    }
 }

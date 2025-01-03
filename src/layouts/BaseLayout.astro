@@ -1,5 +1,6 @@
 ---
-
+import "../styles/global.scss";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!DOCTYPE html />
@@ -7,10 +8,13 @@
 <html lang="pt-br">
     <head>
         <slot name="head" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
         <div id="site-container">
-            <slot name="body" />
+            <Navbar />
+            <slot name="body" />\
         </div>
     </body>
 </html>

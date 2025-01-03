@@ -1,21 +1,19 @@
 ---
 import { Image } from 'astro:assets'
 import Logo from '../assets/images/mais-tech-logo.svg' 
-import '../styles/navbar.scss'
+import '../styles/navbar.scss';
+import MaisTechLogo from './MaisTechLogo.astro';
 ---
 
 <nav id="navbar" class="navbar">
     <div class="nav-logo">
-        <Image 
-        src={Logo} 
-        alt="Mais Tech" 
-        width="229"
-        height="44"
-        />
+        <MaisTechLogo width={120.23} height={29.1} />
     </div>
     <div id="nav-links">
         <a href="#quem-somos" class="nav-link">Quem somos</a>
+        <div class="separator" />
         <a href="#projetos" class="nav-link">Projetos</a>
+        <div class="separator" />
         <a href="#servicos" class="nav-link">Serviços</a>
     </div>
     <div>

@@ -1,0 +1,57 @@
+@use "colors";
+
+main .main-container{
+    height: 900px;
+    width: 100%;
+    clip-path: polygon(0 19%, 0 100%, 100% 100%, 100% 0%);
+    background-color: #E7E7E7;
+    transform: translateY(-200px);
+    z-index: 1;
+    position: relative;
+}
+
+.h2{
+    font-family: 'Montserrat';
+    color: #000000;
+    font-size: 62px;
+    font-weight: bold;
+}
+.container{
+    width: fit-content;
+    margin: auto;
+    transform: translateX(-20px);
+    z-index: 3;
+    position: relative;
+}
+.content{
+    display: flex;
+    align-items: center;
+}
+.container h2{
+    transform: translate(125px, 50px);
+}
+.linus img{
+    object-fit: contain;
+}
+.left-side{
+    transform: translate(120px, -21px);
+    color: colors.$primary_light_active;
+    font-weight: bold;
+}
+.right-side{
+    transform: translate(-120px, -21px);
+    color: colors.$primary_light_active;
+    font-weight: bold;
+}
+#ls1{
+    transform: translate(-8px);
+}
+#ls3{
+    transform: translate(4px);
+}
+#rs1{
+    transform: translate(-10px);
+}
+#rs2{
+    transform: translate(-3px);
+}

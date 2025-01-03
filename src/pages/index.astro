@@ -1,0 +1,44 @@
+---
+import'../styles/linus-p1.scss'
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Linus from '../assets/images/linus_think_light.png'
+
+import { Image } from 'astro:assets';
+---
+<BaseLayout>
+    <Fragment slot="head">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Document</title>
+    </Fragment>
+    <Fragment slot="body">
+        <section class="tech-center">
+            <div class="container">
+                <h2>Apresentamos um novo <br> capítulo para o seu <br> negócio.</h2>
+                <div class="content">
+                    <div class="left-side">
+                        <div id="ls1">Custo-Benefício</div>
+                        <div id="ls2">Transparência</div>
+                        <div id="ls3">Acessibilidade</div>
+                    </div>
+                    <div class="linus">
+                        <Image src={Linus} alt="Linus" width={356} height={290} >
+                    </div>
+                    <div class="right-side">
+                        <div id="rs1">Segurança</div>
+                        <div id="rs2">Qualidade</div>
+                        <div id="rs3">Desempenho</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main>
+            <section class="main-container"></section>
+        </main>
+    </Fragment>
+</BaseLayout>
+
+
